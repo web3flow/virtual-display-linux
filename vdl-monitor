@@ -8,17 +8,17 @@ then
   sleep 3s
   echo "add resolution $screen1"
 
-  xrandr --output VIRTUAL1 --mode $screen1 --left-of LVDS1
+  xrandr --output VIRTUAL1 --mode $screen1 --right-of eDP1
   sleep 3s
   echo "start display VIRTUAL1 to $screen1"
 
-  #xrandr --addmode VIRTUAL2 $screen2
-  #sleep 3s
-  #echo "add resolution $screen2"
+  xrandr --addmode VIRTUAL2 $screen2
+  sleep 3s
+  echo "add resolution $screen2"
 
-  #xrandr --output VIRTUAL2 --mode $screen2 --right-of LVDS1
-  #sleep 3s
-  #echo "start display VIRTUAL2 to $screen2"
+  xrandr --output VIRTUAL2 --mode $screen2 --right-of eDP1
+  sleep 3s
+  echo "start display VIRTUAL2 to $screen2"
 
   # via https://bbs.archlinux.org/viewtopic.php?id=180904
   
